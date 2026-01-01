@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+# GNU version
+alias diff="diff --color=auto" # GNU diffutils required (brew install diffutils)
+alias df="gdf -h"
+alias du="gdu -h"
+alias grep="ggrep --color=auto"
+alias chmod="gchmod --preserve-root -v"
+alias chown="gchown --preserve-root -v"
+alias find="gfind"
+
+# General
+alias c="clear"
+alias ka="killall"
+
+# ls
+alias ls="gls -hFN --color=auto --group-directories-first --hyperlink=auto" # Use GNU ls (brew install coreutils)
+
+# Tmux
+alias s="tmux-sessionizer"
+
+# Misc
+alias iina="open -a 'IINA'"
+alias highlight="highlight --out-format=truecolor --force -s darkplus"
+alias ncdu="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias netspeed="networkQuality" # Internet speed test
+
+# Kitty
+alias kittycat="kitty +kitten icat"
+
+# Download
+alias wget="wget --continue --progress=bar --timestamping"
+alias curl="curl --continue-at - --location --progress-bar --remote-name --remote-time"
+alias aria="aria2c --max-connection-per-server=5 --continue"
+alias yd="yt-dlp --paths ~/Downloads"
+alias yda="yt-dlp -f bestaudio --paths ~/Downloads -o '%(title)s.%(ext)s'"
+
+# Vim
+# Use neovim for vimdiff if present
+command -v nvim >/dev/null && alias vimdiff="nvim -d"
+# Opening file last edited in Neovim
+alias lnvim='nvim -c "normal '\''0"'
+# Pipe output of any command to a temporary Neovim buffer.
+# `ls W` will load the output of ls into Neovim.
+alias -g W='| nvim -c "setlocal buftype=nofile bufhidden=wipe" -c "nnoremap <buffer> q :q!<CR>" -'
+
+# Manage dotfiles
+alias dot="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+alias ds="dot status -uall $HOME/.config"
+
+# Convert video to GIF (with 2K resolution) using ffmpeg
+# Usage: vtg input output, then output.gif will be generated
+alias video2gif='function video_to_gif(){ ffmpeg -i $1 -pix_fmt rgb8 -r 10 -vf scale=2560:-1 $2.gif && gifsicle -O3 $2.gif -o $2.gif && osascript -e "display notification \"$2.gif successfully converted and saved\" with title \"VIDEO2GIF SUCCESS!\""};video_to_gif'
+
+# inferno-flamegraph
+# https://github.com/jonhoo/inferno
+alias inferno="$HOME/gitrepos/inferno/target/release/inferno-flamegraph"
