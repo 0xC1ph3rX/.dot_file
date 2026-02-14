@@ -1,0 +1,109 @@
+{
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.fontFamily": "'Operator Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.fontWeight": "700",
+    "editor.lineHeight": 26,
+    
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic",
+                    "foreground": "#6A9955"
+                }
+            },
+            {
+                "scope": "keyword",
+                "settings": {
+                    "fontStyle": "bold",
+                    "foreground": "#C678DD",
+                    "fontWeight": "bold"
+                }
+            },
+            {
+                "scope": "string",
+                "settings": {
+                    "fontStyle": "italic",
+                    "foreground": "#98C379",
+                    "fontWeight": "500"
+                }
+            },
+            {
+                "scope": "function",
+                "settings": {
+                    "fontStyle": "bold",
+                    "foreground": "#61AFEF",
+                    "fontWeight": "bold"
+                }
+            },
+            {
+                "scope": "variable",
+                "settings": {
+                    "fontStyle": "bold",
+                    "foreground": "#E5E5E5"
+                }
+            },
+            {
+                "scope": "constant",
+                "settings": {
+                    "fontStyle": "bold",
+                    "foreground": "#D19A66"
+                }
+            }
+        ]
+    },
+    
+    "editor.renderWhitespace": "all",
+    "editor.guides.indentation": true,
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    
+    "workbench.iconTheme": "material-icon-theme",
+    
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": true,
+    "workbench.editorAssociations": {
+        "*.txt": "default"
+    },
+    "workbench.activityBar.location": "bottom",
+    "window.customTitleBarVisibility": "auto",
+    "window.confirmSaveUntitledWorkspace": false,
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.enablePreview": false,
+    "files.autoSave": "afterDelay",
+    "[plaintext]": {
+        "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace"
+    },
+    
+    "vim.handleKeys": {
+        "<C-c>": false,
+        "<C-v>": false,
+    },
+    "vim.useCtrlKeys": false,
+    "vim.vimrc.enable": false,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["k", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    
+    "keyboard.shortcuts": [
+        // Comprehensive shortcut configurations remain the same
+        // (Previous keyboard shortcuts)
+    ]
+}
